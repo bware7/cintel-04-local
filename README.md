@@ -16,16 +16,16 @@ This project showcases how to build, test, and publish an interactive web app us
 
 **Step 1: Repository and Environment Setup** 
     
-1.Create and Clone Repository:
+1. Create and Clone Repository:
 ```bash
 git clone <repository-url>
 ```
-2.Set Up Virtual Environment:
+2. Set Up Virtual Environment:
 ```bash
 python -m venv .venv
 .\.venv\Scripts\activate
 ```
-3.Install Dependencies:
+3. Install Dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -33,42 +33,43 @@ pip install -r requirements.txt
 
 **Step 2: Develop and Test the App** 
 
-1.Run the Shiny App:
+1. Run the Shiny App:
 ```bash
 shiny run --reload --launch-browser penguins/app.py
 ```
-2.Test Interactivity:
+2. Test Interactivity:
     - Verify that all features, visualizations, and filters work as expected.
 
 
 **Step 3: Build and Deploy the App** 
 
-1.Export to Static Assets:
+1. Export to Static Assets:
 ```bash
 shiny static-assets remove
 shinylive export penguins docs
 ```
-2.Test Locally:
+2. Test Locally:
 ```bash
 py -m http.server --directory docs --bind localhost 8008
 ```
-3.Commit and Push to GitHub:
+3. Commit and Push to GitHub:
 ```bash
 git add .
 git commit -m "message"
 git push -u origin main
 ```
-4.Enable GitHub Pages:
+4. Enable GitHub Pages:
     - In the GitHub repository settings: Go to Pages and set the branch to main, with the source as the docs/ folder.
 
 
 **Step 4: Customize** 
 
-1.Change Browser Tab Title:
+1. Change Browser Tab Title:
     - Edit docs/index.html and update the <title> tag.
-2.Add a Favicon (Optional):
+2. Add a Favicon (Optional):
 
     - Add a favicon.ico file to the docs folder and link it in index.html:
+    
 ```bash
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
 ```
